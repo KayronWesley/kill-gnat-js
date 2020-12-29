@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kill Gnat</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css"></style>
+	<script src="gameLogic.js"></script>
+</head>
+<body onresize="resizeScene()">
+
+	<div class="menu">
+
+		<div class="health">
+			<img id="heart1" src="image/heart.png">
+			<img id="heart2" src="image/heart.png">
+			<img id="heart3" src="image/heart.png">
+		</div>
+
+		<div class="timeLeft">
+			Time Left: <span id="chronometer"></span>
+		</div>
+	</div>
+	<script>
+		document.getElementById('chronometer').innerHTML = time
+
+		var createGnat = setInterval(function(){
+			randomPosition()
+		}, createGnatTime)
+	</script>
+</body>
+</html>
